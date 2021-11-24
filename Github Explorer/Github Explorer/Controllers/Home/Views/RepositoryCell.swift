@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RepositoryCell: UITableViewCell {
     static let identifier = "RepositoryCell"
@@ -40,14 +41,14 @@ class RepositoryCell: UITableViewCell {
         return label
     }()
     
-    func configure(repository: Repository) {
+    func configure(repository: NSManagedObject) {
         contentView.addSubview(stackView)
         stackView.addArrangedSubview(repoImage)
         stackView.addArrangedSubview(repoName)
         setupLayout()
         
-        let url_image = URL(string: repository.owner.avatar_url)
-        self.repoName.text = repository.full_name
+        let url_image = URL(string: (repository.value(forKey: "full_name") as? String)!)
+        self.repoName.text = repository.value(forKey: "name") as? String
         self.repoImage.load(url: url_image!)
         self.backgroundColor = UIColor(white: 1, alpha: 0)
         self.selectionStyle = .none
