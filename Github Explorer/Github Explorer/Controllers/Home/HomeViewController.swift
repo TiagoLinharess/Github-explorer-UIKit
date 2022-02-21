@@ -12,8 +12,8 @@ class HomeViewController: UIViewController {
     var alertDelegate: CreatableAlertDelegate?
     
     let backgroundImage: UIImageView = {
-        let imageView = UIImageView(image: UIImage(imageLiteralResourceName: "background")) // Declara a imagem
-        imageView.translatesAutoresizingMaskIntoConstraints = false // Habilita as constraints
+        let imageView = UIImageView(image: UIImage(imageLiteralResourceName: "background"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.frame = CGRect(x: 200, y: 0, width: 600, height: 400)
         imageView.alpha = 0.1
         
@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     let searchTextField: UITextField = {
         let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 20))
         let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false // Habilita as constraints
+        textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Text your repository here"
         textField.layer.cornerRadius = 10
         textField.layer.borderWidth = 2.0
@@ -80,23 +80,6 @@ class HomeViewController: UIViewController {
         return table
     }()
     
-    //MARK:- ViewDidLoad
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.alertDelegate = self
-        self.viewModel.alert = self
-        
-        self.view.addSubview(backgroundImage)
-        self.view.addSubview(searchTextField)
-        self.view.addSubview(repositoryTableView)
-        self.view.addSubview(buttonSearch)
-        self.view.addSubview(spinnerStackView)
-        spinnerStackView.addArrangedSubview(spinner)
-        setupConstraints()
-        setupTableView()
-        setupBindings()
-    }
-    
     init(viewModel: HomeViewModel = HomeViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -106,9 +89,32 @@ class HomeViewController: UIViewController {
         self.viewModel = HomeViewModel()
         super.init(coder: coder)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+        setupHierarchy()
+        setupConstraints()
+        setupTableView()
+        setupBindings()
+    }
+    
+    private func setup() {
+        view.backgroundColor = .white
+        alertDelegate = self
+        viewModel.alert = self
+    }
+    
+    private func setupHierarchy() {
+        view.addSubview(backgroundImage)
+        view.addSubview(searchTextField)
+        view.addSubview(repositoryTableView)
+        view.addSubview(buttonSearch)
+        view.addSubview(spinnerStackView)
+        spinnerStackView.addArrangedSubview(spinner)
+    }
 }
 
-//MARK:- Constraints
 extension HomeViewController {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
