@@ -21,7 +21,6 @@
 		F9F6EAE4274D9FEA00817CC4 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE3274D9FEA00817CC4 /* URLImage.swift */; };
 		F9F6EAE6274D9FF000817CC4 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE5274D9FF000817CC4 /* HexColor.swift */; };
 		F9F6EAEA274DA02000817CC4 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */; };
-		F9F6EAEB274DA02000817CC4 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9F6EAE9274DA02000817CC4 /* RepositoryCell.xib */; };
 		F9F6EAF5274DA06700817CC4 /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAEE274DA06700817CC4 /* ViewStatus.swift */; };
 		F9F6EAF6274DA06700817CC4 /* CreatableAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAF0274DA06700817CC4 /* CreatableAlert.swift */; };
 		F9F6EAF7274DA06700817CC4 /* CreatableSafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAF2274DA06700817CC4 /* CreatableSafari.swift */; };
@@ -69,7 +68,6 @@
 		F9F6EAE3274D9FEA00817CC4 /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		F9F6EAE5274D9FF000817CC4 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
-		F9F6EAE9274DA02000817CC4 /* RepositoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		F9F6EAEE274DA06700817CC4 /* ViewStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStatus.swift; sourceTree = "<group>"; };
 		F9F6EAF0274DA06700817CC4 /* CreatableAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatableAlert.swift; sourceTree = "<group>"; };
 		F9F6EAF2274DA06700817CC4 /* CreatableSafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatableSafari.swift; sourceTree = "<group>"; };
@@ -206,7 +204,7 @@
 		F9F6EAD6274D9F2400817CC4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F9F6EAE7274DA02000817CC4 /* Views */,
+				F9F6EAE7274DA02000817CC4 /* SubViews */,
 				F9F6EAD8274D9F4100817CC4 /* HomeViewController.swift */,
 				F9F6EAD7274D9F4000817CC4 /* HomeViewModel.swift */,
 			);
@@ -245,13 +243,12 @@
 			path = URLImage;
 			sourceTree = "<group>";
 		};
-		F9F6EAE7274DA02000817CC4 /* Views */ = {
+		F9F6EAE7274DA02000817CC4 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
 				F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */,
-				F9F6EAE9274DA02000817CC4 /* RepositoryCell.xib */,
 			);
-			path = Views;
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		F9F6EAEC274DA06700817CC4 /* Utils */ = {
@@ -421,7 +418,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9F6EAA9274D9E3600817CC4 /* Assets.xcassets in Resources */,
-				F9F6EAEB274DA02000817CC4 /* RepositoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

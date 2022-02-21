@@ -54,17 +54,12 @@ class RepositoryCell: UITableViewCell {
     }
     
     private func setupLayout() {
-        
-        // Stack View
         NSLayoutConstraint.activate([
             stackView.widthAnchor.constraint(equalToConstant: 280),
             stackView.heightAnchor.constraint(equalToConstant: 120),
             stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-        ])
-        
-        // Image
-        NSLayoutConstraint.activate([
+            
             repoImage.widthAnchor.constraint(equalToConstant: 60),
             repoImage.heightAnchor.constraint(equalToConstant: 60),
         ])

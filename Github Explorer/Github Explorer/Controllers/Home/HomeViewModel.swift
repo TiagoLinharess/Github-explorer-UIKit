@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HomeViewModelDelegate {
+protocol HomeViewModelType {
     var repositories: [Repository] { get set }
     var viewStatus: Box<ViewStatus> { get set }
     var alert: CreatableAlertDelegate? {get set}
@@ -47,4 +47,4 @@ class HomeViewModel {
     }
 }
 
-extension HomeViewModel: HomeViewModelDelegate {}
+extension HomeViewModel: HomeViewModelType {}
