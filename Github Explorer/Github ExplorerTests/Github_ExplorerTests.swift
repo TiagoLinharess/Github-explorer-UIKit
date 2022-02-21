@@ -2,7 +2,7 @@
 //  Github_ExplorerTests.swift
 //  Github ExplorerTests
 //
-//  Created by inchurch on 23/11/21.
+//  Created by Tiago Linhares on 23/11/21.
 //
 
 import XCTest

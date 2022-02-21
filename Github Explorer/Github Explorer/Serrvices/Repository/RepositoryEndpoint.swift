@@ -2,7 +2,7 @@
 //  RepositoryEndpoint.swift
 //  UIKit GitHub Explorer
 //
-//  Created by inchurch on 20/09/21.
+//  Created by Tiago Linhares on 20/09/21.
 //
 
 import Foundation

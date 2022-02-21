@@ -2,7 +2,7 @@
 //  URLImage.swift
 //  UIKit GitHub Explorer
 //
-//  Created by inchurch on 23/06/21.
+//  Created by Tiago Linhares on 23/06/21.
 //
 
 import UIKit

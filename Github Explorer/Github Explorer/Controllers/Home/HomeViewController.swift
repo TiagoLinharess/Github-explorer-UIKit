@@ -2,7 +2,7 @@
 //  MainPageViewController.swift
 //  UIKit GitHub Explorer
 //
-//  Created by inchurch on 18/06/21.
+//  Created by Tiago Linhares on 18/06/21.
 //
 
 import UIKit

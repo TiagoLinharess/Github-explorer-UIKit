@@ -2,7 +2,7 @@
 //  RepositoryCell.swift
 //  UIKit GitHub Explorer
 //
-//  Created by inchurch on 19/06/21.
+//  Created by Tiago Linhares on 19/06/21.
 //
 
 import UIKit
