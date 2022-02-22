@@ -188,7 +188,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier, for: indexPath) as! RepositoryCell
-        cell.configure(repository: viewModel.repositories[indexPath.row])
+        cell.setup(repository: viewModel.repositories[indexPath.row])
         return cell
     }
 }
