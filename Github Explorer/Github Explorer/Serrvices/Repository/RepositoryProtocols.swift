@@ -2,7 +2,7 @@
 //  RepositoryProtocols.swift
 //  Github Explorer
 //
-//  Created by inchurch on 23/11/21.
+//  Created by Tiago Linhares on 23/11/21.
 //
 
 import Foundation

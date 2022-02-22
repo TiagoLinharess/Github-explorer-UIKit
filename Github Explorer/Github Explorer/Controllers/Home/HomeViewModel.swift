@@ -2,12 +2,12 @@
 //  MainPageViewModel.swift
 //  UIKit GitHub Explorer
 //
-//  Created by inchurch on 20/09/21.
+//  Created by Tiago Linhares on 20/09/21.
 //
 
 import Foundation
 
-protocol HomeViewModelDelegate {
+protocol HomeViewModelType {
     var repositories: [Repository] { get set }
     var viewStatus: Box<ViewStatus> { get set }
     var alert: CreatableAlertDelegate? {get set}
@@ -47,4 +47,4 @@ class HomeViewModel {
     }
 }
 
-extension HomeViewModel: HomeViewModelDelegate {}
+extension HomeViewModel: HomeViewModelType {}

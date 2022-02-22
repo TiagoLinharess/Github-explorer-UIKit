@@ -2,13 +2,13 @@
 //  MainPageViewController.swift
 //  UIKit GitHub Explorer
 //
-//  Created by inchurch on 18/06/21.
+//  Created by Tiago Linhares on 18/06/21.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController {
-    var viewModel: HomeViewModelDelegate
+    var viewModel: HomeViewModelType
     var alertDelegate: CreatableAlertDelegate?
     
     let backgroundImage: UIImageView = {
@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.frame = CGRect(x: 200, y: 0, width: 600, height: 400)
         imageView.alpha = 0.1
-        
         return imageView
     }()
     
@@ -31,7 +30,6 @@ class HomeViewController: UIViewController {
         textField.leftView = paddingView
         textField.leftViewMode = .always
         textField.autocapitalizationType = .none
-        
         return textField
     }()
     
@@ -42,7 +40,7 @@ class HomeViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Search", for: .normal)
         button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(apiRequest), for: .touchUpInside)
+        button.addTarget(self, action: #selector(fetchRepository), for: .touchUpInside)
         return button
     }()
     
@@ -50,7 +48,6 @@ class HomeViewController: UIViewController {
         let spinner = UIActivityIndicatorView(style: .medium)
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.startAnimating()
-        
         return spinner
     }()
     
@@ -66,7 +63,6 @@ class HomeViewController: UIViewController {
         stackView.layer.cornerRadius = 10
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        
         return stackView
     }()
     
@@ -74,20 +70,17 @@ class HomeViewController: UIViewController {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.allowsSelection = true
-        table.register(UINib(nibName: RepositoryCell.identifier, bundle: nil), forCellReuseIdentifier: RepositoryCell.identifier)
-        table.rowHeight = 140
-        
+        table.register(RepositoryCell.self, forCellReuseIdentifier: RepositoryCell.identifier)
         return table
     }()
     
-    init(viewModel: HomeViewModel = HomeViewModel()) {
+    init(viewModel: HomeViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        self.viewModel = HomeViewModel()
-        super.init(coder: coder)
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -113,42 +106,31 @@ class HomeViewController: UIViewController {
         view.addSubview(spinnerStackView)
         spinnerStackView.addArrangedSubview(spinner)
     }
-}
-
-extension HomeViewController {
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             searchTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             searchTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             searchTextField.widthAnchor.constraint(equalToConstant: 300),
             searchTextField.heightAnchor.constraint(equalToConstant: 50),
-        ])
-        
-        NSLayoutConstraint.activate([
+            
             buttonSearch.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             buttonSearch.topAnchor.constraint(equalTo: searchTextField.bottomAnchor, constant: 10),
             buttonSearch.widthAnchor.constraint(equalToConstant: 300),
             buttonSearch.heightAnchor.constraint(equalToConstant: 50),
-        ])
-        
-        NSLayoutConstraint.activate([
+            
             spinnerStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             spinnerStackView.topAnchor.constraint(equalTo: searchTextField.bottomAnchor, constant: 10),
             spinnerStackView.widthAnchor.constraint(equalToConstant: 300),
             spinnerStackView.heightAnchor.constraint(equalToConstant: 50),
-        ])
-        
-        NSLayoutConstraint.activate([
+            
             repositoryTableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             repositoryTableView.topAnchor.constraint(equalTo: buttonSearch.bottomAnchor, constant: 50),
             repositoryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             repositoryTableView.widthAnchor.constraint(equalToConstant: 300),
         ])
     }
-}
-
-//MARK:- methods
-extension HomeViewController {
+    
     private func setupBindings() {
         viewModel.viewStatus.bind { status in
             switch status {
@@ -167,7 +149,7 @@ extension HomeViewController {
         }
     }
     
-    @objc func apiRequest() {
+    @objc func fetchRepository() {
         guard let repositoryName = searchTextField.text else { return }
         viewModel.getRepository(repositoryName: repositoryName)
     }
@@ -189,25 +171,6 @@ extension HomeViewController {
     }
 }
 
-//MARK:- NavigationController Style
-extension HomeViewController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        navigationController?.navigationBar.shadowImage = nil
-    }
-}
-
-//MARK:- TableView data source
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     private func setupTableView() {
         repositoryTableView.dataSource = self
@@ -224,8 +187,25 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier, for: indexPath) as! RepositoryCell
-        cell.configure(repository: viewModel.repositories[indexPath.row])
+        cell.setup(repository: viewModel.repositories[indexPath.row])
         return cell
+    }
+}
+
+extension HomeViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage = nil
     }
 }
 

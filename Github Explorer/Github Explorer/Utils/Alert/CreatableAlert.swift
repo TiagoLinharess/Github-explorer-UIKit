@@ -2,7 +2,7 @@
 //  CreatableAlert.swift
 //  UIKit GitHub Explorer
 //
-//  Created by inchurch on 26/09/21.
+//  Created by Tiago Linhares on 26/09/21.
 //
 
 import Foundation
