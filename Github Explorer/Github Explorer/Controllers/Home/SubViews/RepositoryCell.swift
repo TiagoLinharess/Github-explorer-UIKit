@@ -68,13 +68,14 @@ class RepositoryCell: UITableViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            stackView.widthAnchor.constraint(equalToConstant: 280),
-            stackView.heightAnchor.constraint(equalToConstant: 120),
-            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             repoImage.widthAnchor.constraint(equalToConstant: 60),
             repoImage.heightAnchor.constraint(equalToConstant: 60),
+            repoName.heightAnchor.constraint(equalToConstant: 32),
         ])
     }
 }

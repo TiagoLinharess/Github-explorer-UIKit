@@ -71,7 +71,6 @@ class HomeViewController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.allowsSelection = true
         table.register(RepositoryCell.self, forCellReuseIdentifier: RepositoryCell.identifier)
-        table.rowHeight = 140
         return table
     }()
     
