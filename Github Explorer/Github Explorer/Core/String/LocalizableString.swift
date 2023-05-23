@@ -20,6 +20,9 @@ extension LocalizableString.Core {
     /// Github image
     static let backgroundImageName: String = LocalizableString.tr(key: "Core.githubImage")
     
+    /// Logo image
+    static let logoImage: String = LocalizableString.tr(key: "Core.logoImage")
+    
     /// Init Coder
     static let initCoder: String = LocalizableString.tr(key: "Core.initCoder")
 }

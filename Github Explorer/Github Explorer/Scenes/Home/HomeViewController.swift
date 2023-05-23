@@ -9,16 +9,18 @@ import UIKit
 
 protocol HomeViewControllerDisplaying: AnyObject {
     func displayLoading()
-    func displaySuccess()
+    func displaySuccess(viewModel: HomeModel.Repository.ViewModel)
 }
 
 final class HomeViewController<Interactor: HomeInteracting, CustomView: HomeView>: UIViewController {
     
-    // MARK: PROPERTIES
+    // MARK: - Properties
+    
     private let customView: CustomView
     private let interactor: Interactor
     
-    // MARK: INITIALIZE
+    // MARK: - Initialize
+    
     init(
         customView: CustomView,
         interactor: Interactor
@@ -33,7 +35,8 @@ final class HomeViewController<Interactor: HomeInteracting, CustomView: HomeView
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: VIEW LIFE CICLE
+    // MARK: - View life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -41,6 +44,8 @@ final class HomeViewController<Interactor: HomeInteracting, CustomView: HomeView
 }
 
 extension HomeViewController {
+    
+    // MARK: - View setup
     
     func setupView() {
         customView.delegate = self
@@ -51,6 +56,8 @@ extension HomeViewController {
 
 extension HomeViewController: HomeViewDelegate {
     
+    // MARK: - HomeView Delegate
+    
     func searchRepository(repositoryName: String) {
         interactor.searchRepository(respositoryName: repositoryName)
     }
@@ -58,11 +65,13 @@ extension HomeViewController: HomeViewDelegate {
 
 extension HomeViewController: HomeViewControllerDisplaying {
     
+    // MARK: - HomeViewController Displaying
+    
     func displayLoading() {
         
     }
     
-    func displaySuccess() {
+    func displaySuccess(viewModel: HomeModel.Repository.ViewModel) {
         
     }
 }

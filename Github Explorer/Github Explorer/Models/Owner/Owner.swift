@@ -7,12 +7,32 @@
 
 import Foundation
 
-class Owner: Codable {
-  var login: String
-  var avatar_url: String
-  
-  init(login: String, avatar_url: String) {
-    self.login = login
-    self.avatar_url = avatar_url
-  }
+extension GithubModel.Repository {
+    
+    enum Owner {}
+}
+
+extension GithubModel.Repository.Owner {
+    
+    struct Response: Decodable {
+    
+        enum CodingKeys: String, CodingKey {
+            case login = "login"
+            case avatarUrl = "avatar_url"
+        }
+        
+        let login: String
+        let avatarUrl: String
+    }
+    
+    struct viewModel {
+        
+        let login: String
+        let avatarUrl: String
+        
+        init(from dto: Response) {
+            self.login = dto.login
+            self.avatarUrl = dto.avatarUrl
+        }
+    }
 }

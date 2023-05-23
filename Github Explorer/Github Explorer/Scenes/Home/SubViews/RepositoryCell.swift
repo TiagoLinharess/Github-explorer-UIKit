@@ -39,13 +39,13 @@ class RepositoryCell: UITableViewCell {
         return label
     }()
     
-    func setup(repository: Repository) {
-        selectionStyle = .none
-        backgroundColor = UIColor(white: 1, alpha: 0)
-        setupHierarchy()
-        setupConstraints()
-        configure(repository: repository)
-    }
+//    func setup(repository: Repository) {
+//        selectionStyle = .none
+//        backgroundColor = UIColor(white: 1, alpha: 0)
+//        setupHierarchy()
+//        setupConstraints()
+//        configure(repository: repository)
+//    }
     
     private func setupHierarchy() {
         contentView.addSubview(stackView)
@@ -53,10 +53,10 @@ class RepositoryCell: UITableViewCell {
         stackView.addArrangedSubview(repoName)
     }
     
-    private func configure(repository: Repository) {
-        repoName.text = repository.full_name
-        setRepositoryImage(image: repository.owner.avatar_url)
-    }
+//    private func configure(repository: Repository) {
+//        repoName.text = repository.full_name
+//        setRepositoryImage(image: repository.owner.avatar_url)
+//    }
     
     private func setRepositoryImage(image: String) {
         if let url_image = URL(string: image) {

@@ -7,11 +7,11 @@
 
 import Foundation
 
-class RepositoryEndpoint: GithubEndpoint {
+class RepositoryEndpoint: Endpoint {
     var method: HTTPMethod = .get
     var endpoint: String
     
-    init(repoName: String) {
-        self.endpoint = "repos/\(repoName)"
+    init(request: GithubModel.Repository.Request) {
+        self.endpoint = "repos/\(request.repositoryName)"
     }
 }

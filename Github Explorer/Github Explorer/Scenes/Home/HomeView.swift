@@ -24,6 +24,12 @@ final class HomeView: UIView {
     
     // MARK: - UI Elements
     
+    private lazy var githubLogo: UIImageView = {
+        let imageView = UIImageView(image: UIImage(imageLiteralResourceName: LocalizableString.Core.logoImage))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView(image: UIImage(imageLiteralResourceName: LocalizableString.Core.backgroundImageName))
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,14 +53,14 @@ final class HomeView: UIView {
     private lazy var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor(hexString: "#68C151")
+        button.backgroundColor = .greenPrimary
         button.setTitleColor(.white, for: .normal)
         button.setTitle(LocalizableString.Home.searchButtonTitle, for: .normal)
         button.layer.cornerRadius = Layout.Constants.defaultCornerRadius
         button.addAction(.init(handler: { [weak self] _ in
             guard let text = self?.textField.text else { return }
             self?.delegate?.searchRepository(repositoryName: text)
-        }), for: .editingChanged)
+        }), for: .touchUpInside)
         return button
     }()
     
@@ -87,6 +93,7 @@ private extension HomeView {
     
     func setupHierarchy() {
         addSubview(backgroundImage)
+        addSubview(githubLogo)
         addSubview(textField)
         addSubview(button)
     }
@@ -99,7 +106,12 @@ private extension HomeView {
         ])
         
         NSLayoutConstraint.activate([
-            textField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Size.extraLarge.rawValue),
+            githubLogo.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            githubLogo.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: githubLogo.bottomAnchor, constant: Size.extraLarge.rawValue),
             textField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.small.rawValue),
             textField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Size.small.rawValue),
             textField.heightAnchor.constraint(equalToConstant: Size.extraLarge.rawValue)

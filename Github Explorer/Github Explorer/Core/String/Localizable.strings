@@ -8,8 +8,11 @@
 
 // MARK: - Core
 
-/* Home github image */
+/* Github image */
 "Core.githubImage" = "background";
+
+/* Logo image */
+"Core.logoImage" = "logo";
 
 /* Init Coder */
 "Core.initCoder" = "init(coder:) has not been implemented";
