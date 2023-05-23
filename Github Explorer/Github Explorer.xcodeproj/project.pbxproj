@@ -15,6 +15,9 @@
 		F3A0F27D2A1CD50900980180 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0F27C2A1CD50900980180 /* HomeView.swift */; };
 		F3A0F27F2A1CD8A900980180 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0F27E2A1CD8A900980180 /* HomePresenter.swift */; };
 		F3A0F2812A1CD93B00980180 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0F2802A1CD93B00980180 /* HomeCoordinator.swift */; };
+		F3A0F2842A1D003500980180 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0F2832A1D003500980180 /* Size.swift */; };
+		F3A0F2872A1D017600980180 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0F2862A1D017600980180 /* LocalizableString.swift */; };
+		F3A0F2922A1D088500980180 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3A0F2912A1D088500980180 /* Localizable.strings */; };
 		F9F6EA9D274D9E3400817CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EA9C274D9E3400817CC4 /* AppDelegate.swift */; };
 		F9F6EA9F274D9E3400817CC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EA9E274D9E3400817CC4 /* SceneDelegate.swift */; };
 		F9F6EAA9274D9E3600817CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F6EAA8274D9E3600817CC4 /* Assets.xcassets */; };
@@ -27,10 +30,6 @@
 		F9F6EAE4274D9FEA00817CC4 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE3274D9FEA00817CC4 /* URLImage.swift */; };
 		F9F6EAE6274D9FF000817CC4 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE5274D9FF000817CC4 /* HexColor.swift */; };
 		F9F6EAEA274DA02000817CC4 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */; };
-		F9F6EAF5274DA06700817CC4 /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAEE274DA06700817CC4 /* ViewStatus.swift */; };
-		F9F6EAF6274DA06700817CC4 /* CreatableAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAF0274DA06700817CC4 /* CreatableAlert.swift */; };
-		F9F6EAF7274DA06700817CC4 /* CreatableSafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAF2274DA06700817CC4 /* CreatableSafari.swift */; };
-		F9F6EAF8274DA06700817CC4 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAF4274DA06700817CC4 /* Box.swift */; };
 		F9F6EB00274DA0FA00817CC4 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAFA274DA0FA00817CC4 /* RepositoryService.swift */; };
 		F9F6EB01274DA0FA00817CC4 /* RepositoryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAFB274DA0FA00817CC4 /* RepositoryEndpoint.swift */; };
 		F9F6EB03274DA0FA00817CC4 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAFE274DA0FA00817CC4 /* GithubService.swift */; };
@@ -70,11 +69,14 @@
 		F3A0F27C2A1CD50900980180 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F3A0F27E2A1CD8A900980180 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		F3A0F2802A1CD93B00980180 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		F3A0F2832A1D003500980180 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		F3A0F2862A1D017600980180 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		F3A0F2912A1D088500980180 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F3B39D1C2A1D117500070E68 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6EA99274D9E3400817CC4 /* Github Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6EA9C274D9E3400817CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9F6EA9E274D9E3400817CC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F9F6EAA8274D9E3600817CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F9F6EAAD274D9E3600817CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6EAB2274D9E3600817CC4 /* Github ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6EAB6274D9E3600817CC4 /* Github_ExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_ExplorerTests.swift; sourceTree = "<group>"; };
 		F9F6EABC274D9E3600817CC4 /* Github ExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github ExplorerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,10 +88,6 @@
 		F9F6EAE3274D9FEA00817CC4 /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		F9F6EAE5274D9FF000817CC4 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
-		F9F6EAEE274DA06700817CC4 /* ViewStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStatus.swift; sourceTree = "<group>"; };
-		F9F6EAF0274DA06700817CC4 /* CreatableAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatableAlert.swift; sourceTree = "<group>"; };
-		F9F6EAF2274DA06700817CC4 /* CreatableSafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatableSafari.swift; sourceTree = "<group>"; };
-		F9F6EAF4274DA06700817CC4 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		F9F6EAFA274DA0FA00817CC4 /* RepositoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		F9F6EAFB274DA0FA00817CC4 /* RepositoryEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryEndpoint.swift; sourceTree = "<group>"; };
 		F9F6EAFE274DA0FA00817CC4 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
@@ -135,6 +133,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F3A0F2822A1D002900980180 /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				F3A0F2832A1D003500980180 /* Size.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
+		F3A0F2852A1D015F00980180 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				F3A0F2862A1D017600980180 /* LocalizableString.swift */,
+				F3A0F2912A1D088500980180 /* Localizable.strings */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		F5A6A980A21B85C60334AB87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,13 +189,11 @@
 			isa = PBXGroup;
 			children = (
 				F9F6EAD2274D9EC100817CC4 /* Assets */,
-				F9F6EACF274D9E8100817CC4 /* Features */,
+				F9F6EAEC274DA06700817CC4 /* Core */,
 				F9F6EAD3274D9ED400817CC4 /* Models */,
+				F9F6EACF274D9E8100817CC4 /* Scenes */,
 				F9F6EAD4274D9EDB00817CC4 /* Services */,
-				F9F6EAEC274DA06700817CC4 /* Utils */,
-				F9F6EA9C274D9E3400817CC4 /* AppDelegate.swift */,
-				F9F6EA9E274D9E3400817CC4 /* SceneDelegate.swift */,
-				F9F6EAAD274D9E3600817CC4 /* Info.plist */,
+				F3B39D1C2A1D117500070E68 /* Info.plist */,
 			);
 			path = "Github Explorer";
 			sourceTree = "<group>";
@@ -202,12 +215,12 @@
 			path = "Github ExplorerUITests";
 			sourceTree = "<group>";
 		};
-		F9F6EACF274D9E8100817CC4 /* Features */ = {
+		F9F6EACF274D9E8100817CC4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				F9F6EAD6274D9F2400817CC4 /* Home */,
 			);
-			path = Features;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		F9F6EAD2274D9EC100817CC4 /* Assets */ = {
@@ -292,47 +305,15 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
-		F9F6EAEC274DA06700817CC4 /* Utils */ = {
+		F9F6EAEC274DA06700817CC4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				F9F6EAED274DA06700817CC4 /* ViewStatus */,
-				F9F6EAEF274DA06700817CC4 /* Alert */,
-				F9F6EAF1274DA06700817CC4 /* Safari */,
-				F9F6EAF3274DA06700817CC4 /* Published */,
+				F9F6EA9C274D9E3400817CC4 /* AppDelegate.swift */,
+				F9F6EA9E274D9E3400817CC4 /* SceneDelegate.swift */,
+				F3A0F2852A1D015F00980180 /* String */,
+				F3A0F2822A1D002900980180 /* Size */,
 			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		F9F6EAED274DA06700817CC4 /* ViewStatus */ = {
-			isa = PBXGroup;
-			children = (
-				F9F6EAEE274DA06700817CC4 /* ViewStatus.swift */,
-			);
-			path = ViewStatus;
-			sourceTree = "<group>";
-		};
-		F9F6EAEF274DA06700817CC4 /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				F9F6EAF0274DA06700817CC4 /* CreatableAlert.swift */,
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
-		F9F6EAF1274DA06700817CC4 /* Safari */ = {
-			isa = PBXGroup;
-			children = (
-				F9F6EAF2274DA06700817CC4 /* CreatableSafari.swift */,
-			);
-			path = Safari;
-			sourceTree = "<group>";
-		};
-		F9F6EAF3274DA06700817CC4 /* Published */ = {
-			isa = PBXGroup;
-			children = (
-				F9F6EAF4274DA06700817CC4 /* Box.swift */,
-			);
-			path = Published;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		F9F6EAF9274DA0FA00817CC4 /* Repository */ = {
@@ -462,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9F6EAA9274D9E3600817CC4 /* Assets.xcassets in Resources */,
+				F3A0F2922A1D088500980180 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,20 +544,18 @@
 				F9F6EB03274DA0FA00817CC4 /* GithubService.swift in Sources */,
 				F9F6EAE0274D9FA800817CC4 /* Owner.swift in Sources */,
 				F9F6EB00274DA0FA00817CC4 /* RepositoryService.swift in Sources */,
+				F3A0F2842A1D003500980180 /* Size.swift in Sources */,
 				F9F6EB01274DA0FA00817CC4 /* RepositoryEndpoint.swift in Sources */,
 				F9F6EA9D274D9E3400817CC4 /* AppDelegate.swift in Sources */,
-				F9F6EAF5274DA06700817CC4 /* ViewStatus.swift in Sources */,
-				F9F6EAF6274DA06700817CC4 /* CreatableAlert.swift in Sources */,
 				F9F6EAEA274DA02000817CC4 /* RepositoryCell.swift in Sources */,
-				F9F6EAF8274DA06700817CC4 /* Box.swift in Sources */,
 				F9F6EB06274DA9FE00817CC4 /* RepositoryProtocols.swift in Sources */,
 				F3A0F27D2A1CD50900980180 /* HomeView.swift in Sources */,
 				F9F6EA9F274D9E3400817CC4 /* SceneDelegate.swift in Sources */,
 				F9F6EAE6274D9FF000817CC4 /* HexColor.swift in Sources */,
 				F9F6EADA274D9F4100817CC4 /* HomeViewController.swift in Sources */,
+				F3A0F2872A1D017600980180 /* LocalizableString.swift in Sources */,
 				F9F6EB04274DA0FA00817CC4 /* GithubServiceProtocols.swift in Sources */,
 				F35D9ED72A1C42180046189B /* HomeFactory.swift in Sources */,
-				F9F6EAF7274DA06700817CC4 /* CreatableSafari.swift in Sources */,
 				F3A0F2812A1CD93B00980180 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

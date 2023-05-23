@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Github Explorer
+
+  Created by Tiago Linhares Souza on 23/05/23.
+  
+*/
+
+// MARK: - Core
+
+/* Home github image */
+"Core.githubImage" = "background";
+
+/* Init Coder */
+"Core.initCoder" = "init(coder:) has not been implemented";
+
+// MARK: - Home
+
+/* Home text field placeholder */
+"Home.textFieldPlaceholder" = "Text your repository here";
+
+/* Home Search button title*/
+"Home.searchButtonTitle" = "Search";

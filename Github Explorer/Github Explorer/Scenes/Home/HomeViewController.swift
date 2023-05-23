@@ -8,7 +8,8 @@
 import UIKit
 
 protocol HomeViewControllerDisplaying: AnyObject {
-    
+    func displayLoading()
+    func displaySuccess()
 }
 
 final class HomeViewController<Interactor: HomeInteracting, CustomView: HomeView>: UIViewController {
@@ -42,11 +43,26 @@ final class HomeViewController<Interactor: HomeInteracting, CustomView: HomeView
 extension HomeViewController {
     
     func setupView() {
+        customView.delegate = self
         view = customView
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 
+extension HomeViewController: HomeViewDelegate {
+    
+    func searchRepository(repositoryName: String) {
+        interactor.searchRepository(respositoryName: repositoryName)
+    }
+}
+
 extension HomeViewController: HomeViewControllerDisplaying {
     
+    func displayLoading() {
+        
+    }
+    
+    func displaySuccess() {
+        
+    }
 }

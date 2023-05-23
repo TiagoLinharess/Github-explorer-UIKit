@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeInteracting: AnyObject {
-    
+    func searchRepository(respositoryName: String)
 }
 
 final class HomeInteractor {
@@ -22,4 +22,7 @@ final class HomeInteractor {
 
 extension HomeInteractor: HomeInteracting {
     
+    func searchRepository(respositoryName: String) {
+        
+    }
 }
