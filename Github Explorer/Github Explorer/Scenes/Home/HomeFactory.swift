@@ -9,7 +9,7 @@ import UIKit
 
 enum HomeFactory {
     
-    static func make() -> UIViewController {
+    static func make(navigationController: UINavigationController?) -> UIViewController {
         let coordinator = HomeCoordinator()
         let presenter = HomePresenter(coordinator: coordinator)
         let interactor = HomeInteractor(presenter: presenter)
@@ -20,7 +20,7 @@ enum HomeFactory {
             interactor: interactor
         )
         
-        coordinator.navigationController = controller.navigationController
+        coordinator.navigationController = navigationController
         presenter.viewController = controller
         
         return controller

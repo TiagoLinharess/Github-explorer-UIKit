@@ -36,6 +36,15 @@ enum HTTPMethod: String {
 enum WorkerError: Error {
     case genericError
     case customError(String)
+    
+    var message: String {
+        switch self {
+        case .genericError:
+            return localizedDescription
+        case .customError(let string):
+            return string
+        }
+    }
 }
 
 // MARK: - Repository
@@ -60,7 +69,7 @@ extension Repository: RepositoryInput {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 let message = error.localizedDescription
-                completion(.failure(.customError(error.localizedDescription)))
+                completion(.failure(.customError(message)))
                 return
             }
             

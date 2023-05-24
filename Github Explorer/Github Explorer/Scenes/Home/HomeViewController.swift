@@ -8,6 +8,8 @@
 import UIKit
 
 protocol HomeViewControllerDisplaying: AnyObject {
+    
+    func resetDisplay()
     func displayLoading()
     func displaySuccess(viewModel: HomeModel.Repository.ViewModel)
 }
@@ -67,11 +69,21 @@ extension HomeViewController: HomeViewControllerDisplaying {
     
     // MARK: - HomeViewController Displaying
     
+    func resetDisplay() {
+        DispatchQueue.main.async {
+            self.customView.resetDisplay()
+        }
+    }
+    
     func displayLoading() {
-        
+        DispatchQueue.main.async {
+            self.customView.displayLoading()
+        }
     }
     
     func displaySuccess(viewModel: HomeModel.Repository.ViewModel) {
-        
+        DispatchQueue.main.async {
+            self.customView.displaySuccess(viewModel: viewModel)
+        }
     }
 }

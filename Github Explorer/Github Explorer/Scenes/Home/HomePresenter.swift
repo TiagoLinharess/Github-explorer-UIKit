@@ -36,6 +36,7 @@ extension HomePresenter: HomePresenting {
     }
     
     func presentError(error: WorkerError) {
-        
+        viewController?.resetDisplay()
+        coordinator.handleError(error: error)
     }
 }
