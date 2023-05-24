@@ -32,7 +32,7 @@
 		F9F6EAE0274D9FA800817CC4 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EADF274D9FA800817CC4 /* Owner.swift */; };
 		F9F6EAE4274D9FEA00817CC4 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE3274D9FEA00817CC4 /* URLImage.swift */; };
 		F9F6EAE6274D9FF000817CC4 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE5274D9FF000817CC4 /* HexColor.swift */; };
-		F9F6EAEA274DA02000817CC4 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */; };
+		F9F6EAEA274DA02000817CC4 /* HomeRepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAE8274DA02000817CC4 /* HomeRepositoryTableViewCell.swift */; };
 		F9F6EB00274DA0FA00817CC4 /* GithubRepositoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAFA274DA0FA00817CC4 /* GithubRepositoryWorker.swift */; };
 		F9F6EB01274DA0FA00817CC4 /* RepositoryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAFB274DA0FA00817CC4 /* RepositoryEndpoint.swift */; };
 		F9F6EB03274DA0FA00817CC4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6EAFE274DA0FA00817CC4 /* Repository.swift */; };
@@ -91,7 +91,7 @@
 		F9F6EADF274D9FA800817CC4 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		F9F6EAE3274D9FEA00817CC4 /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		F9F6EAE5274D9FF000817CC4 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
-		F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		F9F6EAE8274DA02000817CC4 /* HomeRepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		F9F6EAFA274DA0FA00817CC4 /* GithubRepositoryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepositoryWorker.swift; sourceTree = "<group>"; };
 		F9F6EAFB274DA0FA00817CC4 /* RepositoryEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryEndpoint.swift; sourceTree = "<group>"; };
 		F9F6EAFE274DA0FA00817CC4 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 		F9F6EAE7274DA02000817CC4 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				F9F6EAE8274DA02000817CC4 /* RepositoryCell.swift */,
+				F9F6EAE8274DA02000817CC4 /* HomeRepositoryTableViewCell.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -569,7 +569,7 @@
 				F9F6EB01274DA0FA00817CC4 /* RepositoryEndpoint.swift in Sources */,
 				F9F6EA9D274D9E3400817CC4 /* AppDelegate.swift in Sources */,
 				F3B39D202A1D143100070E68 /* Colors.swift in Sources */,
-				F9F6EAEA274DA02000817CC4 /* RepositoryCell.swift in Sources */,
+				F9F6EAEA274DA02000817CC4 /* HomeRepositoryTableViewCell.swift in Sources */,
 				F3A0F27D2A1CD50900980180 /* HomeView.swift in Sources */,
 				F9F6EA9F274D9E3400817CC4 /* SceneDelegate.swift in Sources */,
 				F9F6EAE6274D9FF000817CC4 /* HexColor.swift in Sources */,

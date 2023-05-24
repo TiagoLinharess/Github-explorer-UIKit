@@ -14,8 +14,14 @@
 /* Logo image */
 "Core.logoImage" = "logo";
 
-/* Init Coder */
+/* Init coder */
 "Core.initCoder" = "init(coder:) has not been implemented";
+
+/* Error title */
+"Core.errorTitle" = "Error";
+
+/* OK title */
+"Core.okTitle" = "OK";
 
 // MARK: - Home
 
@@ -24,3 +30,6 @@
 
 /* Home Search button title*/
 "Home.searchButtonTitle" = "Search";
+
+/* Home repository table view cell identifier */
+"Home.repositoryTableViewCellIdentifier" = "HomeRepositoryTableViewCell";

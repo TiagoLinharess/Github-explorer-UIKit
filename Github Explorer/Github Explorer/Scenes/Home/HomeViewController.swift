@@ -34,7 +34,7 @@ final class HomeViewController<Interactor: HomeInteracting, CustomView: HomeView
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(LocalizableString.Core.initCoder)
     }
     
     // MARK: - View life cicle

@@ -16,4 +16,10 @@ extension UIColor {
     static var greenPrimary: UIColor {
         return UIColor(hexString: "#68C151")
     }
+    
+    /// Ligh Gray
+    /// #EBEDEF
+    static var lightGray: UIColor {
+        return  UIColor(hexString: "#EBEDEF")
+    }
 }

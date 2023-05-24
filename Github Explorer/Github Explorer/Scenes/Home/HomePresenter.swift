@@ -16,9 +16,13 @@ protocol HomePresenting {
 
 final class HomePresenter {
     
+    // MARK: - Properties
+    
     weak var viewController: HomeViewControllerDisplaying?
     
     private let coordinator: HomeCoordinating
+    
+    // MARK: - Initialize
     
     init(coordinator: HomeCoordinating) {
         self.coordinator = coordinator
@@ -26,6 +30,8 @@ final class HomePresenter {
 }
 
 extension HomePresenter: HomePresenting {
+    
+    // MARK: - Home Presenting
 
     func presentLoading() {
         viewController?.displayLoading()

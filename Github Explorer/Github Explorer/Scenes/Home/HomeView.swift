@@ -82,7 +82,7 @@ final class HomeView: UIView {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(RepositoryCell.self, forCellReuseIdentifier: RepositoryCell.identifier)
+        tableView.register(HomeRepositoryTableViewCell.self, forCellReuseIdentifier: HomeRepositoryTableViewCell.identifier)
         return tableView
     }()
     
@@ -193,11 +193,11 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: RepositoryCell.identifier,
+            withIdentifier: HomeRepositoryTableViewCell.identifier,
             for: indexPath
-        ) as? RepositoryCell else { fatalError() }
+        ) as? HomeRepositoryTableViewCell else { fatalError() }
         
-        cell.setup(viewModel: repositories[indexPath.row])
+        cell.configure(viewModel: repositories[indexPath.row])
         
         return cell
     }

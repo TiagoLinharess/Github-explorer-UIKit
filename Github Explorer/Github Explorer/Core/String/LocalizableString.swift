@@ -23,8 +23,14 @@ extension LocalizableString.Core {
     /// Logo image
     static let logoImage: String = LocalizableString.tr(key: "Core.logoImage")
     
-    /// Init Coder
+    /// Init coder
     static let initCoder: String = LocalizableString.tr(key: "Core.initCoder")
+    
+    /// Error title
+    static let errorTitle: String = LocalizableString.tr(key: "Core.errorTitle")
+    
+    /// OK title
+    static let okTitle: String = LocalizableString.tr(key: "Core.okTitle")
 }
 
 extension LocalizableString.Home {
@@ -36,6 +42,9 @@ extension LocalizableString.Home {
     
     /// Home search button title
     static let searchButtonTitle: String = LocalizableString.tr(key: "Home.searchButtonTitle")
+    
+    /// Home repository table view cell identifier
+    static let repositoryTableViewCellIdentifier: String = LocalizableString.tr(key: "Home.repositoryTableViewCellIdentifier")
 }
 
 extension LocalizableString {

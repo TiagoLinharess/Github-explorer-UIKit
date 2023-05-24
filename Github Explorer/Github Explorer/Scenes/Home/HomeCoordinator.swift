@@ -14,14 +14,18 @@ protocol HomeCoordinating: AnyObject {
 
 final class HomeCoordinator {
     
+    // MARK: - Properties
+    
     weak var navigationController: UINavigationController?
 }
 
 extension HomeCoordinator: HomeCoordinating {
     
+    // MARK: - Home Coordinating
+    
     func handleError(error: WorkerError) {
-        let alert = UIAlertController(title: "Error", message: error.message, preferredStyle: .alert)
-        let closeButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        let alert = UIAlertController(title: LocalizableString.Core.errorTitle, message: error.message, preferredStyle: .alert)
+        let closeButton = UIAlertAction(title: LocalizableString.Core.okTitle, style: .cancel, handler: nil)
         
         alert.addAction(closeButton)
         
