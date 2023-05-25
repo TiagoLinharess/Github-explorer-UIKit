@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  HomeRouter.swift
 //  Github Explorer
 //
 //  Created by Tiago Linhares Souza on 23/05/23.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-protocol HomeCoordinating: AnyObject {
+protocol HomeRouterInput: AnyObject {
     
     func handleError(error: WorkerError)
 }
 
-final class HomeCoordinator {
+final class HomeRouter {
     
     // MARK: - Properties
     
     weak var navigationController: UINavigationController?
 }
 
-extension HomeCoordinator: HomeCoordinating {
+extension HomeRouter: HomeRouterInput {
     
     // MARK: - Home Coordinating
     
@@ -28,9 +28,6 @@ extension HomeCoordinator: HomeCoordinating {
         let closeButton = UIAlertAction(title: LocalizableString.Core.okTitle, style: .cancel, handler: nil)
         
         alert.addAction(closeButton)
-        
-        DispatchQueue.main.async {
-            self.navigationController?.present(alert, animated: true, completion: nil)
-        }
+        navigationController?.present(alert, animated: true, completion: nil)
     }
 }

@@ -7,29 +7,18 @@
 
 import UIKit
 
-protocol HomePresenting {
-    
-    func presentLoading()
-    func presentSuccess(response: HomeModel.Repository.Response)
-    func presentError(error: WorkerError)
-}
+typealias HomePresenterInput = HomeInteractorOutput
+
+typealias HomePresenterOutput = HomeViewControllerInput
 
 final class HomePresenter {
     
     // MARK: - Properties
     
-    weak var viewController: HomeViewControllerDisplaying?
-    
-    private let coordinator: HomeCoordinating
-    
-    // MARK: - Initialize
-    
-    init(coordinator: HomeCoordinating) {
-        self.coordinator = coordinator
-    }
+    weak var viewController: HomePresenterOutput?
 }
 
-extension HomePresenter: HomePresenting {
+extension HomePresenter: HomePresenterInput {
     
     // MARK: - Home Presenting
 
@@ -42,7 +31,6 @@ extension HomePresenter: HomePresenting {
     }
     
     func presentError(error: WorkerError) {
-        viewController?.resetDisplay()
-        coordinator.handleError(error: error)
+        viewController?.displayError(error: error)
     }
 }

@@ -10,17 +10,18 @@ import UIKit
 enum HomeFactory {
     
     static func make(navigationController: UINavigationController?) -> UIViewController {
-        let coordinator = HomeCoordinator()
-        let presenter = HomePresenter(coordinator: coordinator)
+        let router = HomeRouter()
+        let presenter = HomePresenter()
         let interactor = HomeInteractor(presenter: presenter)
         let view = HomeView()
         
-        let controller = HomeViewController<HomeInteractor, HomeView>(
+        let controller = HomeViewController<HomeRouter, HomeInteractor, HomeView>(
             customView: view,
-            interactor: interactor
+            interactor: interactor,
+            router: router
         )
         
-        coordinator.navigationController = navigationController
+        router.navigationController = navigationController
         presenter.viewController = controller
         
         return controller

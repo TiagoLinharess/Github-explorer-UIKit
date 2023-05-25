@@ -7,28 +7,36 @@
 
 import UIKit
 
-protocol HomeViewControllerDisplaying: AnyObject {
+protocol HomeViewControllerInput: AnyObject {
     
-    func resetDisplay()
+    func displayError(error: WorkerError)
     func displayLoading()
     func displaySuccess(viewModel: HomeModel.Repository.ViewModel)
 }
 
-final class HomeViewController<Interactor: HomeInteracting, CustomView: HomeView>: UIViewController {
+protocol HomeViewControllerOutput: AnyObject {
+    
+    func searchRepository(respositoryName: String)
+}
+
+final class HomeViewController<Router: HomeRouterInput, Interactor: HomeViewControllerOutput, CustomView: HomeView>: UIViewController {
     
     // MARK: - Properties
     
     private let customView: CustomView
     private let interactor: Interactor
+    private let router: Router
     
     // MARK: - Initialize
     
     init(
         customView: CustomView,
-        interactor: Interactor
+        interactor: Interactor,
+        router: Router
     ) {
         self.customView = customView
         self.interactor = interactor
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -65,15 +73,9 @@ extension HomeViewController: HomeViewDelegate {
     }
 }
 
-extension HomeViewController: HomeViewControllerDisplaying {
+extension HomeViewController: HomeViewControllerInput {
     
-    // MARK: - HomeViewController Displaying
-    
-    func resetDisplay() {
-        DispatchQueue.main.async {
-            self.customView.resetDisplay()
-        }
-    }
+    // MARK: - HomeViewController Input
     
     func displayLoading() {
         DispatchQueue.main.async {
@@ -84,6 +86,13 @@ extension HomeViewController: HomeViewControllerDisplaying {
     func displaySuccess(viewModel: HomeModel.Repository.ViewModel) {
         DispatchQueue.main.async {
             self.customView.displaySuccess(viewModel: viewModel)
+        }
+    }
+    
+    func displayError(error: WorkerError) {
+        DispatchQueue.main.async {
+            self.customView.resetDisplay()
+            self.router.handleError(error: error)
         }
     }
 }
