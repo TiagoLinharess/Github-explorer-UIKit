@@ -9,7 +9,7 @@ import UIKit
 
 enum HomeFactory {
     
-    static func make(navigationController: UINavigationController?) -> UIViewController {
+    static func configure(navigationController: UINavigationController?) -> UIViewController {
         let router = HomeRouter()
         let presenter = HomePresenter()
         let interactor = HomeInteractor(presenter: presenter)
