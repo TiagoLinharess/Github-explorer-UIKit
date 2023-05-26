@@ -21,11 +21,11 @@ final class HomeInteractor {
     // MARK: - Properties
     
     private let presenter: HomeInteractorOutput
-    private let worker: GithubRepositoryWorking
+    private let worker: GithubRepositoryWorkerInput
     
     // MARK: - Initialize
     
-    init(presenter: HomePresenterInput, worker: GithubRepositoryWorking = GithubRepositoryWorker()) {
+    init(presenter: HomePresenterInput, worker: GithubRepositoryWorkerInput = GithubRepositoryWorker()) {
         self.presenter = presenter
         self.worker = worker
     }

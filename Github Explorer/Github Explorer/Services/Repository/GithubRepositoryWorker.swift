@@ -9,7 +9,7 @@ import Foundation
 
 typealias GithubRepositoryWorkerCompletion = (Result<GithubModel.Repository.Response, WorkerError>) -> Void
 
-protocol GithubRepositoryWorking {
+protocol GithubRepositoryWorkerInput {
     func fetchRepository(request: GithubModel.Repository.Request, completion: @escaping GithubRepositoryWorkerCompletion)
 }
 
@@ -28,7 +28,7 @@ final class GithubRepositoryWorker {
     }
 }
 
-extension GithubRepositoryWorker: GithubRepositoryWorking {
+extension GithubRepositoryWorker: GithubRepositoryWorkerInput {
     
     // MARK: - Fetch Repository
     
