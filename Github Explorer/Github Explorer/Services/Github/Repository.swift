@@ -11,7 +11,7 @@ import SwiftUI
 // MARK: - Repository Input
 
 protocol RepositoryInput {
-    func callMethod(endpoint: Endpoint, completion: @escaping (Result<Data, WorkerError>) -> Void)
+    func callMethod(endpoint: Endpoint) async throws -> Data
 }
 
 // MARK: - Endpoint
@@ -60,25 +60,13 @@ extension Repository: RepositoryInput {
     
     // MARK: - Request
     
-    func callMethod(endpoint: Endpoint, completion: @escaping (Result<Data, WorkerError>) -> Void) {
-        guard let url = URL(string:"\(baseUrl)/\(endpoint.endpoint)") else { return }
+    func callMethod(endpoint: Endpoint) async throws -> Data {
+        guard let url = URL(string:"\(baseUrl)/\(endpoint.endpoint)") else { throw WorkerError.genericError }
         
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                let message = error.localizedDescription
-                completion(.failure(.customError(message)))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(.genericError))
-                return
-            }
-            
-            completion(.success(data))
-        }.resume()
+        let (data, _) = try await URLSession.shared.data(for: request)
+        return data
     }
 }

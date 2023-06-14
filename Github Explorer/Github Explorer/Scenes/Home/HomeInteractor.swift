@@ -13,7 +13,7 @@ protocol HomeInteractorOutput {
     
     func presentLoading()
     func presentSuccess(response: HomeModel.Repository.Response)
-    func presentError(error: WorkerError)
+    func presentError(error: Error)
 }
 
 final class HomeInteractor {
@@ -39,12 +39,12 @@ extension HomeInteractor: HomeIntercatorInput {
         let request = HomeModel.Repository.Request(repositoryName: respositoryName)
         
         presenter.presentLoading()
-        worker.fetchRepository(request: request) { [weak self] result in
-            switch result {
-            case let .success(response):
-                self?.presenter.presentSuccess(response: response)
-            case let .failure(error):
-                self?.presenter.presentError(error: error)
+        Task {
+            do {
+                let response = try await worker.fetchRepository(request: request)
+                presenter.presentSuccess(response: response)
+            } catch {
+                presenter.presentError(error: error)
             }
         }
     }

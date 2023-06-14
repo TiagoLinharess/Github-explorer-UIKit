@@ -30,7 +30,11 @@ extension HomePresenter: HomePresenterInput {
         viewController?.displaySuccess(viewModel: .init(from: response))
     }
     
-    func presentError(error: WorkerError) {
-        viewController?.displayError(error: error)
+    func presentError(error: Error) {
+        if let error = error as? WorkerError {
+            viewController?.displayError(error: error)
+        } else {
+            viewController?.displayError(error: .genericError)
+        }
     }
 }
