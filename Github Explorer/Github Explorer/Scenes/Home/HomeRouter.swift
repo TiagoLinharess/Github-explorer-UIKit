@@ -10,6 +10,7 @@ import UIKit
 protocol HomeRouterInput: AnyObject {
     
     func handleError(error: WorkerError)
+    func openSafari(url: URL)
 }
 
 final class HomeRouter {
@@ -29,5 +30,9 @@ extension HomeRouter: HomeRouterInput {
         
         alert.addAction(closeButton)
         navigationController?.present(alert, animated: true, completion: nil)
+    }
+    
+    func openSafari(url: URL) {
+        // todo
     }
 }

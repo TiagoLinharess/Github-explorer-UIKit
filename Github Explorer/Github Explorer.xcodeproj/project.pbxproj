@@ -253,8 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				F3B39D352A1D314800070E68 /* Github */,
-				F9F6EAE2274D9FD200817CC4 /* URLImage */,
-				F9F6EAE1274D9FBB00817CC4 /* HexColor */,
 				F9F6EADB274D9F7400817CC4 /* Repository */,
 				F9F6EADE274D9F9B00817CC4 /* Owner */,
 			);
@@ -330,6 +328,8 @@
 			children = (
 				F9F6EA9C274D9E3400817CC4 /* AppDelegate.swift */,
 				F9F6EA9E274D9E3400817CC4 /* SceneDelegate.swift */,
+				F9F6EAE2274D9FD200817CC4 /* URLImage */,
+				F9F6EAE1274D9FBB00817CC4 /* HexColor */,
 				F3B39D1E2A1D141500070E68 /* Colors */,
 				F3A0F2822A1D002900980180 /* Size */,
 				F3A0F2852A1D015F00980180 /* String */,
