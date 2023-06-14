@@ -71,6 +71,10 @@ extension HomeViewController: HomeViewDelegate {
     func searchRepository(repositoryName: String) {
         interactor.searchRepository(respositoryName: repositoryName)
     }
+    
+    func openDetail(repository: HomeModel.Repository.ViewModel) {
+        router.openSafari(urlString: repository.url)
+    }
 }
 
 extension HomeViewController: HomeViewControllerInput {

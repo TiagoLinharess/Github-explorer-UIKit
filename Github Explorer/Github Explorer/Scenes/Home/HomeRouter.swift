@@ -5,12 +5,13 @@
 //  Created by Tiago Linhares Souza on 23/05/23.
 //
 
+import SafariServices
 import UIKit
 
 protocol HomeRouterInput: AnyObject {
     
     func handleError(error: WorkerError)
-    func openSafari(url: URL)
+    func openSafari(urlString: String)
 }
 
 final class HomeRouter {
@@ -32,7 +33,13 @@ extension HomeRouter: HomeRouterInput {
         navigationController?.present(alert, animated: true, completion: nil)
     }
     
-    func openSafari(url: URL) {
-        // todo
+    func openSafari(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        
+        let controller = SFSafariViewController(url: url, configuration: config)
+        navigationController?.present(controller, animated: true)
     }
 }

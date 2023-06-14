@@ -21,8 +21,8 @@ extension GithubModel.Repository.Owner {
             case avatarUrl = "avatar_url"
         }
         
-        let login: String
-        let avatarUrl: String
+        let login: String?
+        let avatarUrl: String?
     }
     
     struct viewModel {
@@ -30,9 +30,9 @@ extension GithubModel.Repository.Owner {
         let login: String
         let avatarUrl: String
         
-        init(from dto: Response) {
-            self.login = dto.login
-            self.avatarUrl = dto.avatarUrl
+        init(from dto: Response?) {
+            self.login = dto?.login ?? String()
+            self.avatarUrl = dto?.avatarUrl ?? String()
         }
     }
 }

@@ -12,6 +12,7 @@ protocol HomeViewDelegate: AnyObject {
     // MARK: - Delegate
     
     func searchRepository(repositoryName: String)
+    func openDetail(repository: HomeModel.Repository.ViewModel)
 }
 
 final class HomeView: UIView {
@@ -200,6 +201,10 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         cell.configure(viewModel: repositories[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.openDetail(repository: repositories[indexPath.row])
     }
 }
 
