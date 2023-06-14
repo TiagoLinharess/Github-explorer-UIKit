@@ -20,8 +20,8 @@ final class HomeRepositoryTableViewCell: UITableViewCell {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
         stackView.alignment = .center
         stackView.spacing = Size.extraSmall.rawValue
         stackView.backgroundColor = .lightGray
@@ -118,7 +118,7 @@ extension HomeRepositoryTableViewCell.Layout {
         static let layoutMargins = NSDirectionalEdgeInsets(
             top: Size.medium.rawValue,
             leading: Size.medium.rawValue,
-            bottom: Size.extraSmall.rawValue,
+            bottom: Size.medium.rawValue,
             trailing: Size.medium.rawValue
         )
     }
