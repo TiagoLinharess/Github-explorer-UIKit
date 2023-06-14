@@ -20,8 +20,7 @@ final class HomeRepositoryTableViewCell: UITableViewCell {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .equalSpacing
         stackView.alignment = .center
         stackView.spacing = Size.extraSmall.rawValue
         stackView.backgroundColor = .lightGray
