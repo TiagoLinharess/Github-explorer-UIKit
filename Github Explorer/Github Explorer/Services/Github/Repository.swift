@@ -61,12 +61,15 @@ extension Repository: RepositoryInput {
     // MARK: - Request
     
     func callMethod(endpoint: Endpoint) async throws -> Data {
-        guard let url = URL(string:"\(baseUrl)/\(endpoint.endpoint)") else { throw WorkerError.genericError }
+        guard let url = URL(string:"\(baseUrl)/\(endpoint.endpoint)") else { throw WorkerError.customError("No Available URL") }
         
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-        let (data, _) = try await URLSession.shared.data(for: request)
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode else { throw WorkerError.customError("No response from server") }
+        guard statusCode >= 200 && statusCode <= 400 else { throw WorkerError.genericError }
+        
         return data
     }
 }
