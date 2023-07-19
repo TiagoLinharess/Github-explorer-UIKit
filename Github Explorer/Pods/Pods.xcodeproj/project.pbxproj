@@ -32,7 +32,7 @@
 		05810E7DBDF987CC62C845DA2A7FEC8C /* Pods-Github Explorer-Github ExplorerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Github Explorer-Github ExplorerUITests-dummy.m"; sourceTree = "<group>"; };
 		0A98E706CDB56D5A8EA3651065ED6BA3 /* Pods-Github Explorer-Github ExplorerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Github Explorer-Github ExplorerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F3C22C586DBE326B94ECDBD715A4AFB /* Pods-Github ExplorerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Github ExplorerTests.release.xcconfig"; sourceTree = "<group>"; };
-		0FFFB64937CE6911255AD24F528903DE /* Pods-Github Explorer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Github Explorer"; path = Pods_Github_Explorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FFFB64937CE6911255AD24F528903DE /* Pods_Github_Explorer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Explorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA6B56D41EFA5110850B2BE164005EE /* Pods-Github Explorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Github Explorer.release.xcconfig"; sourceTree = "<group>"; };
 		35A3D1866FE96C59C75CB7AF75C5AC1C /* Pods-Github Explorer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Github Explorer-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D606489092F35F1A413855BE4761A4F /* Pods-Github Explorer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Github Explorer-umbrella.h"; sourceTree = "<group>"; };
@@ -45,8 +45,8 @@
 		72C826AC460B2FD28B70649DDEBD629E /* Pods-Github Explorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Github Explorer.debug.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7F563B7EADF028CE2C3D6DB5BF77D22B /* Pods-Github Explorer-Github ExplorerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Github Explorer-Github ExplorerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9BB52B456B9B6B78048736AFC4F6F3A3 /* Pods-Github Explorer-Github ExplorerUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Github Explorer-Github ExplorerUITests"; path = Pods_Github_Explorer_Github_ExplorerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BB52B456B9B6B78048736AFC4F6F3A3 /* Pods_Github_Explorer_Github_ExplorerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Explorer_Github_ExplorerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A947D980D5846D5AAAD5D883E1107640 /* Pods-Github ExplorerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Github ExplorerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B259F580699A20B33187B16D645BBDD4 /* Pods-Github Explorer-Github ExplorerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Github Explorer-Github ExplorerUITests-umbrella.h"; sourceTree = "<group>"; };
 		B3D0FD58058B2C49EDA0A76583C83535 /* Pods-Github ExplorerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Github ExplorerTests-dummy.m"; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		D814A5031834865283286B58F33C1B13 /* Pods-Github Explorer-Github ExplorerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Github Explorer-Github ExplorerUITests-Info.plist"; sourceTree = "<group>"; };
 		D9C8ADF48CB95D9AA4FED775ED86680F /* Pods-Github Explorer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Github Explorer-dummy.m"; sourceTree = "<group>"; };
 		DCACEA516DA1BF275B2D8759DF8A426A /* Pods-Github Explorer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Github Explorer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DD8310C727484BE648E0B23C9BB32BB7 /* Pods-Github ExplorerTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Github ExplorerTests"; path = Pods_Github_ExplorerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD8310C727484BE648E0B23C9BB32BB7 /* Pods_Github_ExplorerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_ExplorerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EE04FB5FB9D3D3E5EEF6E91AE93C4E /* Pods-Github ExplorerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Github ExplorerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDE82F54EAD09B347931DB365D96C26D /* Pods-Github Explorer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Github Explorer.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,9 +91,9 @@
 		1CB6D5DA5CAA1A26BA479213BBBBC466 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0FFFB64937CE6911255AD24F528903DE /* Pods-Github Explorer */,
-				9BB52B456B9B6B78048736AFC4F6F3A3 /* Pods-Github Explorer-Github ExplorerUITests */,
-				DD8310C727484BE648E0B23C9BB32BB7 /* Pods-Github ExplorerTests */,
+				0FFFB64937CE6911255AD24F528903DE /* Pods_Github_Explorer.framework */,
+				9BB52B456B9B6B78048736AFC4F6F3A3 /* Pods_Github_Explorer_Github_ExplorerUITests.framework */,
+				DD8310C727484BE648E0B23C9BB32BB7 /* Pods_Github_ExplorerTests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 			);
 			name = "Pods-Github Explorer";
 			productName = Pods_Github_Explorer;
-			productReference = 0FFFB64937CE6911255AD24F528903DE /* Pods-Github Explorer */;
+			productReference = 0FFFB64937CE6911255AD24F528903DE /* Pods_Github_Explorer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5A6317C7AFC4CFAA02CFA9B8AA411C1A /* Pods-Github Explorer-Github ExplorerUITests */ = {
@@ -245,7 +245,7 @@
 			);
 			name = "Pods-Github Explorer-Github ExplorerUITests";
 			productName = Pods_Github_Explorer_Github_ExplorerUITests;
-			productReference = 9BB52B456B9B6B78048736AFC4F6F3A3 /* Pods-Github Explorer-Github ExplorerUITests */;
+			productReference = 9BB52B456B9B6B78048736AFC4F6F3A3 /* Pods_Github_Explorer_Github_ExplorerUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F4169A01E1C532C7800F2F414A21126E /* Pods-Github ExplorerTests */ = {
@@ -264,7 +264,7 @@
 			);
 			name = "Pods-Github ExplorerTests";
 			productName = Pods_Github_ExplorerTests;
-			productReference = DD8310C727484BE648E0B23C9BB32BB7 /* Pods-Github ExplorerTests */;
+			productReference = DD8310C727484BE648E0B23C9BB32BB7 /* Pods_Github_ExplorerTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -373,7 +373,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Github ExplorerTests/Pods-Github ExplorerTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,7 +410,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Github Explorer/Pods-Github Explorer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,7 +447,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Github Explorer/Pods-Github Explorer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +485,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Github Explorer-Github ExplorerUITests/Pods-Github Explorer-Github ExplorerUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +560,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -623,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,7 +651,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Github ExplorerTests/Pods-Github ExplorerTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,7 +689,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Github Explorer-Github ExplorerUITests/Pods-Github Explorer-Github ExplorerUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
